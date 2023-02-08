@@ -11,18 +11,10 @@
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Challenges ---
 [INFO] Changes detected - recompiling the module!
 [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
-[INFO] Compiling 7 source files to /workspace/adrizik-pep-project/target/classes
+[INFO] Compiling 8 source files to /workspace/adrizik-pep-project/target/classes
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[30,28] invalid method reference
-  cannot find symbol
-    symbol:   method postLoginHandler()
-    location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[31,31] invalid method reference
-  cannot find symbol
-    symbol:   method postMessageHandler()
-    location: class Controller.SocialMediaController
 [ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[32,30] invalid method reference
   cannot find symbol
     symbol:   method getMessageHandler()
@@ -39,23 +31,15 @@
   cannot find symbol
     symbol:   method getAccountMessageHandler()
     location: class Controller.SocialMediaController
-[INFO] 6 errors 
+[INFO] 4 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.122 s
-[INFO] Finished at: 2023-02-08T22:16:11Z
+[INFO] Total time:  3.540 s
+[INFO] Finished at: 2023-02-08T22:59:41Z
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project Challenges: Compilation failure: Compilation failure: 
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[30,28] invalid method reference
-[ERROR]   cannot find symbol
-[ERROR]     symbol:   method postLoginHandler()
-[ERROR]     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[31,31] invalid method reference
-[ERROR]   cannot find symbol
-[ERROR]     symbol:   method postMessageHandler()
-[ERROR]     location: class Controller.SocialMediaController
 [ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[32,30] invalid method reference
 [ERROR]   cannot find symbol
 [ERROR]     symbol:   method getMessageHandler()
