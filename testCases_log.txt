@@ -3,14 +3,6 @@
 [INFO] ----------------------< org.revature:Challenges >-----------------------
 [INFO] Building Challenges 1.1
 [INFO] --------------------------------[ jar ]---------------------------------
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.0.0-M7/maven-surefire-plugin-3.0.0-M7.pom
-Progress (1): 2.7/7.2 kBProgress (1): 5.5/7.2 kBProgress (1): 7.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.0.0-M7/maven-surefire-plugin-3.0.0-M7.pom (7.2 kB at 24 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.0.0-M7/surefire-3.0.0-M7.pom
-Progress (1): 2.7/22 kBProgress (1): 5.5/22 kBProgress (1): 8.2/22 kBProgress (1): 11/22 kB Progress (1): 14/22 kBProgress (1): 16/22 kBProgress (1): 19/22 kBProgress (1): 22 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.0.0-M7/surefire-3.0.0-M7.pom (22 kB at 748 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom
-Progress (1): 2.7/45 kBProgress (1): 5.5/45 kBProgress (1): 8.2/45 kBProgress (1): 11/45 kB Progress (1): 14/45 kBProgress (1): 16/45 kBProgress (1): 20/45 kBProgress (1): 24/45 kBProgress (1): 28/45 kBProgress (1): 32/45 kBProgress (1): 36/45 kBProgress (1): 40/45 kBProgress (1): 45/45 kBProgress (1): 45 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom (45 kB at 632 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/26/apache-26.pom
-Progress (1): 4.1/21 kBProgress (1): 8.2/21 kBProgress (1): 12/21 kB Progress (1): 16/21 kBProgress (1): 20/21 kBProgress (1): 21 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/26/apache-26.pom (21 kB at 1.0 MB/s)
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Challenges ---
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
@@ -19,66 +11,66 @@ Progress (1): 4.1/21 kBProgress (1): 8.2/21 kBProgress (1): 12/21 kB Progress
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Challenges ---
 [INFO] Changes detected - recompiling the module!
 [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
-[INFO] Compiling 5 source files to /workspace/adrizik-pep-project/target/classes
+[INFO] Compiling 7 source files to /workspace/adrizik-pep-project/target/classes
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[20,28] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[30,28] invalid method reference
   cannot find symbol
-    symbol:   method exampleHandler()
+    symbol:   method postLoginHandler()
     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[21,31] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[31,31] invalid method reference
   cannot find symbol
-    symbol:   method exampleHandler()
+    symbol:   method postMessageHandler()
     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[22,30] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[32,30] invalid method reference
   cannot find symbol
-    symbol:   method exampleHandler()
+    symbol:   method getMessageHandler()
     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[23,43] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[33,43] invalid method reference
   cannot find symbol
-    symbol:   method exampleHandler()
+    symbol:   method getMessageIdHandler()
     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[24,45] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[34,45] invalid method reference
   cannot find symbol
-    symbol:   method exampleHandler()
+    symbol:   method patchMessageHandler()
     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[25,52] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[35,52] invalid method reference
   cannot find symbol
-    symbol:   method exampleHandler()
+    symbol:   method getAccountMessageHandler()
     location: class Controller.SocialMediaController
 [INFO] 6 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.213 s
-[INFO] Finished at: 2023-02-08T00:14:40Z
+[INFO] Total time:  4.122 s
+[INFO] Finished at: 2023-02-08T22:16:11Z
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project Challenges: Compilation failure: Compilation failure: 
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[20,28] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[30,28] invalid method reference
 [ERROR]   cannot find symbol
-[ERROR]     symbol:   method exampleHandler()
+[ERROR]     symbol:   method postLoginHandler()
 [ERROR]     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[21,31] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[31,31] invalid method reference
 [ERROR]   cannot find symbol
-[ERROR]     symbol:   method exampleHandler()
+[ERROR]     symbol:   method postMessageHandler()
 [ERROR]     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[22,30] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[32,30] invalid method reference
 [ERROR]   cannot find symbol
-[ERROR]     symbol:   method exampleHandler()
+[ERROR]     symbol:   method getMessageHandler()
 [ERROR]     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[23,43] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[33,43] invalid method reference
 [ERROR]   cannot find symbol
-[ERROR]     symbol:   method exampleHandler()
+[ERROR]     symbol:   method getMessageIdHandler()
 [ERROR]     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[24,45] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[34,45] invalid method reference
 [ERROR]   cannot find symbol
-[ERROR]     symbol:   method exampleHandler()
+[ERROR]     symbol:   method patchMessageHandler()
 [ERROR]     location: class Controller.SocialMediaController
-[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[25,52] invalid method reference
+[ERROR] /workspace/adrizik-pep-project/src/main/java/Controller/SocialMediaController.java:[35,52] invalid method reference
 [ERROR]   cannot find symbol
-[ERROR]     symbol:   method exampleHandler()
+[ERROR]     symbol:   method getAccountMessageHandler()
 [ERROR]     location: class Controller.SocialMediaController
 [ERROR] -> [Help 1]
 [ERROR] 
