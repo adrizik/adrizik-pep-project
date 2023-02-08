@@ -1,4 +1,12 @@
 package Controller;
+import Model.Account;
+import Model.Message;
+
+import Service.AccountService;
+import Service.MessageService;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.javalin.Javalin;
 import io.javalin.http.Context;
@@ -9,6 +17,8 @@ import io.javalin.http.Context;
  * refer to prior mini-project labs and lecture materials for guidance on how a controller may be built.
  */
 public class SocialMediaController {
+    AccountService accountService;
+    MessageService messageService;
     /**
      * In order for the test cases to work, you will need to write the endpoints in the startAPI() method, as the test
      * suite must receive a Javalin object from this method.
@@ -16,13 +26,13 @@ public class SocialMediaController {
      */
     public Javalin startAPI() {
         Javalin app = Javalin.create();
-        app.post("/register", this::newUserHandler);
-        app.post("/login", this::exampleHandler);
-        app.post("/messages", this::exampleHandler);
-        app.get("/messages", this::exampleHandler);
-        app.get("/messages/{message_id}", this::exampleHandler);
-        app.patch("/messages/{message_id}", this::exampleHandler);
-        app.get("/accounts/{account_id}/messages", this::exampleHandler);
+        app.post("/register", this::postNewAccountHandler);
+        app.post("/login", this::postLoginHandler);
+        app.post("/messages", this::postMessageHandler);
+        app.get("/messages", this::getMessageHandler);
+        app.get("/messages/{message_id}", this::getMessageIdHandler);
+        app.patch("/messages/{message_id}", this::patchMessageHandler);
+        app.get("/accounts/{account_id}/messages", this::getAccountMessageHandler);
         
         return app;
     }
@@ -31,9 +41,19 @@ public class SocialMediaController {
      * This is an example handler for an example endpoint.
      * @param context The Javalin Context object manages information about both the HTTP request and response.
      */
-    private void newUserHandler(Context context) {
-        context.json("sample text");
+    private void postNewAccountHandler(Context ctx) throws JsonProcessingException{
+        ObjectMapper mapper = new ObjectMapper();
+        Account NewAccount = mapper.readValue(ctx.body(), Account.class);
+        Account registerAccount = accountService.newAccount(NewAccount);
+        if(registerAccount != null){
+            ctx.json(mapper.writeValueAsString(registerAccount));
+        }else{
+            ctx.status(400);
+        }
+        
     }
+
+
 
 
 }

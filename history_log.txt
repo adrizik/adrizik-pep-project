@@ -1,0 +1,7 @@
+commit 2ffa149b31b51716415f0c8a0c098fb69d3fb799
+Author: adrizik <rizik_adriana@hotmail.com>
+Date:   Wed Feb 8 00:14:32 2023 +0000
+
+    Added endpoints
+
+ 1 file changed, 9 insertions(+), 3 deletions(-)
