@@ -1,7 +1,7 @@
-commit 761225f1560d06d78d4690378b24a51fac054d2d
+commit 038b5d52d42a1b450385b14e131452fe7845da63
 Author: adrizik <rizik_adriana@hotmail.com>
-Date:   Wed Feb 8 22:59:35 2023 +0000
+Date:   Wed Feb 8 22:59:58 2023 +0000
 
-    AccountDAO
+    New Accounts
 
- 6 files changed, 81 insertions(+), 44 deletions(-)
+ 2 files changed, 8 insertions(+), 24 deletions(-)
