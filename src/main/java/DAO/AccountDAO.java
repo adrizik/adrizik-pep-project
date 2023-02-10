@@ -22,6 +22,7 @@ public class AccountDAO {
             ResultSet pkeyResultSet = preparedStatement.getGeneratedKeys();
             if(pkeyResultSet.next()){
                 int generated_account_id = (int) pkeyResultSet.getLong(1);
+                System.out.println(generated_account_id);
                 return new Account(generated_account_id, account.getUsername(), account.getPassword());
             }
 
