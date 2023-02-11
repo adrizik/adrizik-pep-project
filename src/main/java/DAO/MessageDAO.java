@@ -1,8 +1,11 @@
 package DAO;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import Model.Message;
+import Service.MessageService;
 import Util.ConnectionUtil;
 
 
@@ -39,6 +42,27 @@ public class MessageDAO {
             System.out.println(e.getMessage());
         }
        
+        return null;
+    }
+
+    public List<MessageService> getAllMessages() {
+        Connection connection = ConnectionUtil.getConnection();
+        List <MessageService> allMesagges = new ArrayList<>();
+
+        try{
+            String sql = "SELECT * FROM message";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet allResults = preparedStatement.executeQuery();
+            
+            while(allResults.next()){
+                MessageService messageService = new MessageService(allResults.getInt("message_id"), all)
+            }
+        }catch{
+
+        }
+        
+        
         return null;
     }
     
