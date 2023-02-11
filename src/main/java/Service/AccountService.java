@@ -12,10 +12,14 @@ public class AccountService {
 
     public Account addAccount(Account account) {
         
-       if(!(account.username.isEmpty()) || account.password.length() > 4){
+       if(account.username.length() > 0 && account.password.length() > 4){
             return accountDAO.insertAccount(account);
         }
         return null;
+    }
+
+    public Account findAccount(Account account) {
+        return accountDAO.findUserAndPassword(account);
     }
 
 }
