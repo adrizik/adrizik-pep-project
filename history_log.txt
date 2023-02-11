@@ -1,7 +1,7 @@
-commit 265399b9c7f6c1810c38b57dfc3e1e5ca55f6d3f
+commit 5c0b595e70e5313b7e713ae8524f88bcc79f3e3a
 Author: adrizik <rizik_adriana@hotmail.com>
-Date:   Sat Feb 11 20:56:01 2023 +0000
+Date:   Sat Feb 11 21:09:48 2023 +0000
 
-    get all messages
+    step 4
 
- 4 files changed, 2142 insertions(+), 221 deletions(-)
+ 2 files changed, 176 insertions(+), 2247 deletions(-)
