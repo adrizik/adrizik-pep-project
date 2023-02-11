@@ -1,7 +1,7 @@
-commit c883915528d6e4278abd5f1d10f3c7bf00d8c199
+commit 4278f09b3b4f8c444a8480c3a5273fc2d3b79722
 Author: adrizik <rizik_adriana@hotmail.com>
-Date:   Sat Feb 11 04:30:41 2023 +0000
+Date:   Sat Feb 11 10:45:22 2023 +0000
 
-    successful account
+    new method
 
- 5 files changed, 149 insertions(+), 253 deletions(-)
+ 5 files changed, 103 insertions(+), 279 deletions(-)

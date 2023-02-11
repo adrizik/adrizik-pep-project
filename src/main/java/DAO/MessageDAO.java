@@ -12,6 +12,14 @@ public class MessageDAO {
         Connection connection = ConnectionUtil.getConnection();
 
         try{ 
+            String checksql = "SELECT * FROM account WHERE account_id = ?";
+            PreparedStatement checkStatement = connection.prepareStatement(checksql);
+            checkStatement.setInt(1, message.getPosted_by());
+            ResultSet checkResult = checkStatement.executeQuery();
+            if(!checkResult.next()){
+                return null;
+            }
+
             String sql = "INSERT INTO message (posted_by, message_text, time_posted_epoch) VALUES (?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
@@ -20,11 +28,11 @@ public class MessageDAO {
             preparedStatement.setLong(3, message.getTime_posted_epoch());
 
             preparedStatement.executeUpdate();
-            ResultSet pkeyResultSet = preparedStatement.getGeneratedKeys();
-            if(pkeyResultSet.next()){
-                int generated_account_id = (int) pkeyResultSet.getLong(1);
-                System.out.println(generated_account_id);
-                return new Account(generated_account_id, account.getUsername(), account.getPassword());
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+            if(resultSet.next()){
+                int generated_message_id = (int) resultSet.getLong(1);
+                System.out.println(generated_message_id);
+                return new Message(generated_message_id, message.getPosted_by(), message.getMessage_text(), message.getTime_posted_epoch());
             }
 
         }catch(SQLException e){
