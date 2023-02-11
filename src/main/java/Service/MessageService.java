@@ -9,7 +9,7 @@ import DAO.MessageDAO;
 public class MessageService {
     private MessageDAO messageDAO;
 
-    public MessageService(){
+    public MessageService(int i, int j, String string, int k){
         messageDAO = new MessageDAO();
     }
 

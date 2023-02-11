@@ -56,7 +56,7 @@ public class MessageDAO {
             ResultSet allResults = preparedStatement.executeQuery();
             
             while(allResults.next()){
-                MessageService messageService = new MessageService(allResults.getInt("message_id"), all)
+                MessageService messageService = new MessageService(allResults.getInt("message_id"), allResults.getInt("posted_by"), allResults.getString("message_text"));
             }
         }catch{
 
