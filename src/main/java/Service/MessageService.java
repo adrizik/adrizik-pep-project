@@ -9,7 +9,7 @@ import DAO.MessageDAO;
 public class MessageService {
     private MessageDAO messageDAO;
 
-    public MessageService(int i, int j, String string, int k){
+    public MessageService(){
         messageDAO = new MessageDAO();
     }
 
@@ -21,7 +21,7 @@ public class MessageService {
         return null;
     }
 
-    public List<MessageService> getAllMessages() {
+    public List<Message> getAllMessages() {
         return messageDAO.getAllMessages();
     }
     

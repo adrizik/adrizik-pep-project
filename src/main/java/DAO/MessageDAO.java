@@ -45,25 +45,25 @@ public class MessageDAO {
         return null;
     }
 
-    public List<MessageService> getAllMessages() {
+    public List<Message> getAllMessages() {
         Connection connection = ConnectionUtil.getConnection();
-        List <MessageService> allMesagges = new ArrayList<>();
+        List <Message> allMesagges = new ArrayList<>();
 
         try{
             String sql = "SELECT * FROM message";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet allResults = preparedStatement.executeQuery();
-            
-            while(allResults.next()){
-                MessageService messageService = new MessageService(allResults.getInt("message_id"), allResults.getInt("posted_by"), allResults.getString("message_text"));
+            ResultSet rs = preparedStatement.executeQuery();
+            while(rs.next()){
+                Message message = new Message(rs.getInt("message_id"), rs.getInt("posted_by"), rs.getString("message_text"), rs.getLong("time_posted_epoch"));
+                allMesagges.add(message);
             }
-        }catch{
-
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
         }
         
         
-        return null;
+        return allMesagges;
     }
     
 }
