@@ -91,7 +91,7 @@ public class MessageDAO {
         return null;
     }
 
-    public Object deleteMessageById(int messageId) {
+    public Message deleteMessageById(int messageId) {
         Connection connection = ConnectionUtil.getConnection();
 
         try{

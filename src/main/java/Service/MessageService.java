@@ -29,7 +29,7 @@ public class MessageService {
         return messageDAO.getMessageById(message_id);
     }
 
-    public Object deleteMessageById(int messageId) {
+    public Message deleteMessageById(int messageId) {
         return messageDAO.deleteMessageById(messageId);
     }
     
