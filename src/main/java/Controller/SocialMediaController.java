@@ -6,6 +6,8 @@ import Service.AccountService;
 import Service.MessageService;
 
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -42,6 +44,7 @@ public class SocialMediaController {
        app.get("/messages/{message_id}", this::getMessageByIdHandler);
        app.delete("/messages/{message_id}", this::deleteMessageByIdHandler);
        app.patch("/messages/{message_id}", this::updateMessageByIdHandler);
+       app.get("/accounts/{account_id}/messages", this::getMessagesByUserHandler);
         return app;
     }
 
@@ -125,6 +128,20 @@ public class SocialMediaController {
             ctx.status(400);
         }
 
+        
+    }
+
+    private void getMessagesByUserHandler(Context ctx){
+        int accountId = Integer.parseInt(ctx.pathParam("account_id"));
+        List<Message> messages = new ArrayList<>();
+
+        for(Message message : messageService.getAllMessages()){
+            if(message.getPosted_by() == accountId) {
+                messages.add(message);
+            }
+        }
+
+        ctx.json(messages);
         
     }
 
